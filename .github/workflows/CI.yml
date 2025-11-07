@@ -4,7 +4,8 @@ on: [push]
 jobs:
   CI:
   runs-on: ubuntu-latest
-  steps:
+
+steps:
     - uses: actions/checkout@v5
       name: Source Code checkout
 
