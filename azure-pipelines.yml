@@ -17,8 +17,8 @@ pool:
 steps:
 - task: UsePythonVersion@0
   inputs:
-    versionSpec: '$(python.version)'
-  displayName: 'Use Python $(python.version)'
+    versionSpec: '3.12'
+  displayName: 'Use Python 3.12'
 
 - script: |
     python -m pip install --upgrade pip
@@ -35,7 +35,7 @@ steps:
     rootFolderOrFile: $(System.DefaultWorkingDirectory)
     includeRootFolder: false
     archiveType: zip
-    archiveFile: $(Build.ArtifactStagingDirectory)/$(build.BuildId)-$(python.version).zip
+    archiveFile: $(Build.ArtifactStagingDirectory)/$(build.BuildId)-3.12.zip
     replaceExistingArchive: true
 
 - task: PublishBuildArtifacts@1
