@@ -4,15 +4,15 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
-
-strategy:
-  matrix:
-    python310:
-      python.version: '3.10'
-    python311:
-      python.version: '3.11'
-    python312:
-      python.version: '3.12'
+# free tier can't have parallelism
+#strategy:
+#  matrix:
+#    python310:
+#      python.version: '3.10'
+#    python311:
+#      python.version: '3.11'
+#    python312:
+#      python.version: '3.12'
 
 steps:
 - task: UsePythonVersion@0
