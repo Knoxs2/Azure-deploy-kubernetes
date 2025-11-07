@@ -3,16 +3,16 @@ run-name: CI/CD
 on: [push]
 jobs:
   CI:
-  runs-on: ubuntu-latest
-  steps:
-    - uses: actions/checkout@v5
-      name: Source Code checkout
+    runs-on: 'ubuntu-latest'
+    steps:
+      - uses: actions/checkout@v5
+        name: Source Code checkout
 
-    - name: Python Setup
-      uses: actions/setup-python@v6
-      with:
-         python-version: '3.10'
-    - name: Execute Python script
-      run: |
-        python script.py
-    
+      - name: Python Setup
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.10'
+      - name: Execute Python script
+        run: |
+          python script.py
+      
