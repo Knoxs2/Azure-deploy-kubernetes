@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Home - My Website{% endblock %}
+
+{% block content %}
+
+<div class="hero">
+    <div class="hero-content">
+        <h1>Welcome to My Website</h1>
+        <p>A simple website built with Python Flask backend</p>
+        <a href="{{ url_for('about') }}" class="cta-button">Learn More</a>
+    </div>
+</div>
+
+<div class="features">
+    <div class="feature">
+        <h3>Fast & Lightweight</h3>
+        <p>Built with Flask for optimal performance</p>
+    </div>
+    <div class="feature">
+        <h3>Responsive Design</h3>
+        <p>Works on all devices and screen sizes</p>
+    </div>
+    <div class="feature">
+        <h3>Easy to Extend</h3>
+        <p>Simple structure that's easy to modify</p>
+    </div>
+</div>
+{% endblock %}
